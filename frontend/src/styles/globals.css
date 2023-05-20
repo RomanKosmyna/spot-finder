@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+}
+
+:root {
+    --w100: 100%;
+    --vh100: 100vh;
+
+    --border-radius-625: .625rem;
+
+    --flex: flex;
+    --flex-center: center;
+    --flex-column: column;
+}
