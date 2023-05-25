@@ -36,3 +36,5 @@ lerna-debug.log*
 
 nest-cli.json
 tsconfig.build.json
+
+.env

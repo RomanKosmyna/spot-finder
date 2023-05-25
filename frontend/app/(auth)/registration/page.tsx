@@ -1,6 +1,6 @@
 import AuthContainer from "@/src/components/AuthContainer/AuthContainer";
 
-export default function Register() {
+export default function Registration() {
   return (
     <div>
       <AuthContainer

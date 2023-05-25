@@ -8,6 +8,7 @@ export default function Login() {
         formType={"login"}
         status={"New Here?"}
         route={"login"}
+        pageRoute={"login"}
       />
     </div>
   );
