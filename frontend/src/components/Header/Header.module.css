@@ -1,7 +1,7 @@
 .container {
     height: 5rem;
     min-height: 5rem;
-    background-color: lightgrey;
+    border-bottom: 1px solid black;
     display: var(--flex);
     align-items: var(--flex-center);
     justify-content: space-between;
@@ -30,4 +30,13 @@
 
 .li > a {
     text-decoration: none;
+}
+
+.burgerBtn {
+    border: none;
+    background-color: transparent;
+}
+
+.burgerBtn > .burgerIcon {
+    font-size: 3.2rem;
 }

@@ -13,3 +13,29 @@ model User {
   username String
   password String
 }
+
+model Venue {
+  id       String      @id @default(uuid())
+  name     String
+  photo
+  schedule String
+  contact  String
+}
+
+model VenueTags {
+  categories categoriesType
+  cuisine    cuisineType
+  features   featuresType
+}
+
+type categoriesType {
+  type String[]
+}
+
+type cuisineType {
+  type String[]
+}
+
+type featuresType {
+  type String[]
+}

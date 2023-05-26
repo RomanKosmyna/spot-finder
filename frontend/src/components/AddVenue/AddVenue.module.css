@@ -1,0 +1,49 @@
+.container {
+    width: var(--w100);
+    height: var(--vh100);
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: var(--flex);
+    justify-content: var(--flex-center);
+    align-items: var(--flex-center);
+}
+
+.modal {
+    width: 80%;
+    height: 90%;
+    background-color: white;
+    animation: .4s fadeIn ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.closeModal {
+    display: var(--flex);
+    justify-content: flex-end;
+}
+
+.closeBtn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.closeBtn > .closeIcon {
+    font-size: 3rem;
+}
+
+.modalName {
+    text-align: center;
+    border-bottom: 1px solid black;
+}

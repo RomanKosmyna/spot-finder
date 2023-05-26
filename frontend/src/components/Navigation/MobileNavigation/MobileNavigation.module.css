@@ -1,0 +1,34 @@
+.container {
+    width: var(--w100);
+    height: var(--vh100);
+    background-color: rgba(0,0,0,0.5);
+    display: var(--flex);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.burgerBtn {
+    border: none;
+    background-color: transparent;
+    width: 4rem;
+    height: 4rem;
+    margin-top: .4rem;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.burgerBtn > .burgerIcon {
+    font-size: 3rem;
+    color: white;
+}

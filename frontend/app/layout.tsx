@@ -1,4 +1,5 @@
 import "../src/styles/globals.css";
+import { Providers } from "@/src/redux";
 
 export const metadata = {
   title: 'Spot Finder',
@@ -12,7 +13,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+      <Providers>{children}</Providers>
+      </body>
     </html>
   )
 }
