@@ -15,27 +15,18 @@ model User {
 }
 
 model Venue {
-  id       String      @id @default(uuid())
-  name     String
-  photo
-  schedule String
-  contact  String
+  id          String      @id @default(uuid())
+  name        String
+  photo       String
+  schedule    String
+  contact     String
+  description String
+  tags?       String[]
 }
 
 model VenueTags {
-  categories categoriesType
-  cuisine    cuisineType
-  features   featuresType
-}
-
-type categoriesType {
-  type String[]
-}
-
-type cuisineType {
-  type String[]
-}
-
-type featuresType {
-  type String[]
+  id         String      @id @default(uuid())
+  categories String[]
+  cuisine    String[]
+  features   String[]
 }

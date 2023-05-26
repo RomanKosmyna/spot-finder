@@ -14,6 +14,9 @@ import { PasswordService } from './password/password.service';
 import { PasswordModule } from './password/password.module';
 import { JwtService } from './jwt/jwt.service';
 import { JwtModule } from './jwt/jwt.module';
+import { VenueService } from './venue/venue.service';
+import { VenueController } from './venue/venue.controller';
+import { VenueModule } from './venue/venue.module';
 
 @Module({
   imports: [
@@ -23,8 +26,9 @@ import { JwtModule } from './jwt/jwt.module';
     CommonModule,
     PasswordModule,
     JwtModule,
+    VenueModule,
   ],
-  controllers: [AppController, AuthController, UserController],
+  controllers: [AppController, AuthController, UserController, VenueController],
   providers: [
     AppService,
     AuthService,
@@ -32,6 +36,7 @@ import { JwtModule } from './jwt/jwt.module';
     CommonService,
     PasswordService,
     JwtService,
+    VenueService,
   ],
 })
 export class AppModule {}

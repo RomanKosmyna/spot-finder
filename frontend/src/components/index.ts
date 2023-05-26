@@ -7,3 +7,4 @@ export * from "./Navigation/Navigation/Navigation";
 export * from "./Navigation/MobileNavigation/MobileNavigation";
 export * from "./Profile/DefaultProfile/DefaultProfile";
 export * from "./AddVenue/AddVenue";
+export * from "./VenueForm/VenueForm";
