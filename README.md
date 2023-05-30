@@ -50,14 +50,19 @@ Since project is using Next.js 13 for its client side, it exploits built in fetc
     • Sending a message to the venue manager (basically a user that added a venue)
     <br/>
     • Logging into a personal account (with corresponding privileges)
-    
+  <br/>
+  <br/>
 - Navigation through general sections:
 <br/>
     • Home (All venues)
+    <br/>
     • Filtering/Search
+    <br/>
     • Top (with editing capabilities) + Ability to add top categories like "Best venue for weddings, corporate events, birthdays"
+    <br/>
     • News (add promotions)
-    
+ <br/>
+ <br/>
 - Personal Account (Regular User):
 <br/>
     • Profile Editing
