@@ -88,7 +88,20 @@ Since project is using Next.js 13 for its client side, it exploits built in fetc
     <br/>
     • Messages from the venue's page (complaint or question via email)
     
-4) _Personal Account (Administator):_
-    
+4) _Personal Account (Administator) (Already has all regular user account functions):_
+    • List of venues awaiting moderation
+    • All venues
+    • Editing all venues
+    • Deleting any venue
+    • Editing news in a venue 
+    • All users
+    • Editing a user
+    • Deleting a user
+    • Linking a venue to another user
+    • Editing comments and changing venues ratings
+    • Access to analytics on venue views
+    • Analytics on venue views over time
+    • Editing general textual information in the application (About the establishment, contacts...)
+    • Editing general news
 
 ## _Project is being optimized for all devices._
