@@ -30,7 +30,7 @@ Since project is using Next.js 13 for its client side, it exploits built in fetc
 
 ## Main Features:
 
- 1) From user perspective:
+ 1) _From user perspective:_
 
     • Authentication, Authorization process
     <br/>
@@ -53,7 +53,7 @@ Since project is using Next.js 13 for its client side, it exploits built in fetc
     • Logging into a personal account (with corresponding privileges)
   
   
-2) Navigation through general sections:
+2) _Navigation through general sections:_
 
     • Home (All venues)
     <br/>
@@ -64,7 +64,7 @@ Since project is using Next.js 13 for its client side, it exploits built in fetc
     • News (add promotions)
  
  
-3) Personal Account (Regular User):
+3) _Personal Account (Regular User):_
 
     • Profile Editing
     <br/>
