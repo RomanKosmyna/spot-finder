@@ -50,8 +50,8 @@ Since project is using Next.js 13 for its client side, it exploits built in fetc
     • Sending a message to the venue manager (basically a user that added a venue)
     <br/>
     • Logging into a personal account (with corresponding privileges)
-  <br/>
-  <br/>
+  
+  
 2) Navigation through general sections:
 
     • Home (All venues)
