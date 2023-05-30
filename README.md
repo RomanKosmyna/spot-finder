@@ -1,5 +1,6 @@
 # spot-finder
 
+## _Currently in progress.
 ## Final Okten School project.
 
 Main Technologies:
@@ -61,20 +62,30 @@ Since project is using Next.js 13 for its client side, it exploits built in fetc
     • Top (with editing capabilities) + Ability to add top categories like "Best venue for weddings, corporate events, birthdays"
     <br/>
     • News (add promotions)
- <br/>
- <br/>
+ 
+ 
 3) Personal Account (Regular User):
-<br/>
+
     • Profile Editing
+    <br/>
     • Adding Venue (after moderation by the venue administrator, the venue is included in the general list)
+    <br/>
     • Editing Venue
+    <br/>
     • Deleting Venue
+    <br/>
     • Adding Venue News
+    <br/>
     • Deleting Venue News
+    <br/>
     • Favorites Tab (viewing favorites, removing from favorites)
+    <br/>
     • My Comments Tab (list of venues with my comments)
+    <br/>
     • My Ratings Tab (list of venues with my ratings)
+    <br/>
     • View statistics of views within specified date ranges for personal venue
+    <br/>
     • Messages from the venue's page (complaint or question via email)
     
 4) Personal Account (Administator):
