@@ -18,7 +18,7 @@ Back-End Techologies:
 - Multer, Bcrypt, Swagger
 
 Database:
--PostgreSQL
+- PostgreSQL
 
 Tools:
 - Postman, Eslint, Prettier
