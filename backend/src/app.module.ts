@@ -17,6 +17,8 @@ import { JwtModule } from './jwt/jwt.module';
 import { VenueService } from './venue/venue.service';
 import { VenueController } from './venue/venue.controller';
 import { VenueModule } from './venue/venue.module';
+import { ServeStaticModule } from "@nestjs/serve-static";
+import { join } from 'path';
 
 @Module({
   imports: [
@@ -27,6 +29,9 @@ import { VenueModule } from './venue/venue.module';
     PasswordModule,
     JwtModule,
     VenueModule,
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'public'),
+    }),
   ],
   controllers: [AppController, AuthController, UserController, VenueController],
   providers: [

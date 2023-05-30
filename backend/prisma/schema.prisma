@@ -21,7 +21,7 @@ model Venue {
   schedule    String
   contact     String
   description String
-  tags?       String[]
+  tags        String[] @default([])
 }
 
 model VenueTags {

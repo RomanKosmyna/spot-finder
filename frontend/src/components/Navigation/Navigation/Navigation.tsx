@@ -25,14 +25,14 @@ const Navigation: FC<IProps> = ({ version }) => {
         </li>
 
         <li className={styles.li}>
-          <Link href={"/top"}>
+          <Link href={"/"}>
             <AutoAwesomeRoundedIcon className={version === "mobile" ? styles.mobileIcon : styles.desktopIcon}/>
             <span>Best Venues</span>
           </Link>
         </li>
 
         <li className={styles.li}>
-          <Link href={"/puyachok"}>
+          <Link href={"/"}>
             <LocalCafeRoundedIcon className={version === "mobile" ? styles.mobileIcon : styles.desktopIcon}/>
             <span>Puyachok</span>
           </Link>

@@ -1,10 +1,33 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from '../core/orm/prisma.service';
 import VenueTagsDto from './dto/venue.tags.dto';
+import VenueDto from './dto/venue.dto';
+import { Venue } from '@prisma/client';
 
 @Injectable()
 export class VenueService {
   constructor(private readonly prismaService: PrismaService) {}
+
+  async getVenues() {
+    return await this.prismaService.venue.findMany();
+  }
+
+  async createVenue(body: VenueDto): Promise<Venue> {
+    return await this.prismaService.venue.create({
+      data: {
+        name: body.name,
+        photo: body.photo,
+        schedule: body.schedule,
+        contact: body.contact,
+        description: body.description,
+        tags: body.tags,
+      },
+    });
+  }
+
+  async getVenueTags() {
+    return await this.prismaService.venueTags.findFirst();
+  }
 
   async createVenueTags(body: VenueTagsDto) {
     return await this.prismaService.venueTags.create({
@@ -14,9 +37,5 @@ export class VenueService {
         features: body.features,
       },
     });
-  }
-
-  async getVenueTags() {
-    return await this.prismaService.venueTags.findFirst();
   }
 }

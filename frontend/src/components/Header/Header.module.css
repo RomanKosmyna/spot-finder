@@ -1,11 +1,19 @@
 .container {
-    height: 5rem;
+    height: 10%;
     min-height: 5rem;
-    border-bottom: 1px solid black;
+    position: sticky;
     display: var(--flex);
     align-items: var(--flex-center);
     justify-content: space-between;
+    background: hsla(0,0%,100%,.8);
+    top: 0;
+    backdrop-filter: saturate(180%) blur(5px);
     padding: 0 .5rem;
+    z-index: 3333;
+}
+
+.headerBorderOnScroll {
+    box-shadow: inset 0 -1px 0 0 #eaeaea;
 }
 
 .heading {
@@ -39,4 +47,8 @@
 
 .burgerBtn > .burgerIcon {
     font-size: 3.2rem;
+}
+
+.overflow {
+    overflow-y: hidden;
 }

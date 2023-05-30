@@ -6,9 +6,20 @@ body {
     --w100: 100%;
     --vh100: 100vh;
 
+    --white: white;
+    --black: black;
+    --tropical-color: #9381ff;
+
     --border-radius-625: .625rem;
 
     --flex: flex;
     --flex-center: center;
     --flex-column: column;
+
+    --section-background: radial-gradient(50% 50% at 50% 50%, #fff 0,#fafafa 100%);
 }
+
+.bodyOverflowOpenedMobileMenu {
+    overflow-y: hidden;
+}
+

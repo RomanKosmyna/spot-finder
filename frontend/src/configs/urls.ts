@@ -1,8 +1,9 @@
-const api = "http://localhost:3000";
+const apiURL = "http://localhost:3000";
 
 const urls = {
   login: "/login",
-  registration: "/registration"
+  registration: "/registration",
+  getVenues: "/venue/allVenues"
 }
 
-export {api, urls};
+export {apiURL, urls};

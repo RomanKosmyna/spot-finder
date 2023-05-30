@@ -3,8 +3,14 @@ import axios from "axios";
 
 import styles from "./VenueForm.module.css";
 
+interface Tags {
+  categories?: string[];
+  cuisine?: string[];
+  features?: string[];
+}
+
 const VenueForm = () => {
-  const [tags, setTags] = useState<object[]>([]);
+  const [tags, setTags] = useState<Tags>([]);
   const [chosenTags, setChosenTags] = useState<string[]>([]);
 
   useEffect(() => {
@@ -54,7 +60,7 @@ const VenueForm = () => {
           {tags.categories?.map((category: string, index: number) => (
             <button type="submit" key={index} onClick={(event) => {
               chooseTag(event, category);
-            }} className={`${chosenTags.includes(category) && styles.green}`}>{category}</button>
+            }} className={`${chosenTags.includes(category) ? styles.green : ''}`}>{category}</button>
           ))}
         </div>
         <div>
@@ -62,7 +68,7 @@ const VenueForm = () => {
           {tags.cuisine?.map((cuisine: string, index: number) => (
             <button type="submit" key={index} onClick={(event) => {
               chooseTag(event, cuisine);
-            }} className={`${chosenTags.includes(cuisine) && styles.green}`}>{cuisine}</button>
+            }} className={`${chosenTags.includes(cuisine) ? styles.green : ''}`}>{cuisine}</button>
           ))}
         </div>
         <div>
@@ -70,7 +76,7 @@ const VenueForm = () => {
           {tags.features?.map((feature: string, index: number) => (
             <button type="submit" key={index} onClick={(event) => {
               chooseTag(event, feature);
-            }} className={`${chosenTags.includes(feature) && styles.green}`}>{feature}</button>
+            }} className={`${chosenTags.includes(feature) ? styles.green : ''}`}>{feature}</button>
           ))}
         </div>
       </div>
@@ -79,7 +85,6 @@ const VenueForm = () => {
           Add
         </button>
       </div>
-      {JSON.stringify(chosenTags)}
     </form>
   );
 };

@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsNotEmpty, IsString, Length, Matches } from 'class-validator';
-import { UserConstants } from '../../core/constant';
+import { UserConstant } from '../../core/constant';
 import { Transform } from 'class-transformer';
 
 export default class CreateUserDto {
@@ -9,13 +9,14 @@ export default class CreateUserDto {
   @IsNotEmpty()
   @Transform(({ value }) => value.trim())
   @Length(4, 10)
-  @Matches(UserConstants.username)
+  @Matches(UserConstant.username)
   username: string;
 
   @ApiProperty({ required: true, example: 'user@mail.com' })
   @IsString()
   @IsNotEmpty()
-  @Matches(UserConstants.email)
+  @Transform(({ value }) => value.trim())
+  @Matches(UserConstant.email)
   email: string;
 
   @ApiProperty()
@@ -23,6 +24,6 @@ export default class CreateUserDto {
   @IsNotEmpty()
   @Transform(({ value }) => value.trim())
   @Length(6, 14)
-  @Matches(UserConstants.password)
+  @Matches(UserConstant.password)
   password: string;
 }

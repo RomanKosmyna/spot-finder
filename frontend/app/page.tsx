@@ -1,18 +1,14 @@
-"use client";
-
+import NavigationContainer from "@/src/components/Navigation/NavigationContainer/NavigationContainer";
 import Header from "@/src/components/Header/Header";
-import MobileNavigation from "@/src/components/Navigation/MobileNavigation/MobileNavigation";
-import { useAppSelector } from "@/src/hooks/redux.hooks";
-import { trackWidth } from "@/src/hooks";
+import VenuesList from "@/src/components/Venues/VenuesList/VenuesList";
 
-export default function Home() {
-  const {toggleBurgerMenu} = useAppSelector(state => state.toggleReducer);
-  const innerWidth = trackWidth();
+export default async function Home() {
 
   return (
-    <main>
+    <>
       <Header />
-      {toggleBurgerMenu && innerWidth < 760 && <MobileNavigation />}
-    </main>
+      <NavigationContainer />
+      <VenuesList/>
+    </>
   );
 }

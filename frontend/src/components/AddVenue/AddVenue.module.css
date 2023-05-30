@@ -5,7 +5,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 4333;
     display: var(--flex);
     justify-content: var(--flex-center);
     align-items: var(--flex-center);

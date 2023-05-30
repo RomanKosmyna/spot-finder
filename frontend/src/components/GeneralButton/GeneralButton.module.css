@@ -1,0 +1,16 @@
+.btn {
+    border: 3px solid var(--white);
+    background-color: var(--black);
+    width: 8.2rem;
+    height: 2.5rem;
+    border-radius: 0.625rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--white);
+    transition: background-color .3s;
+}
+
+.btn:hover {
+    color: var(--tropical-color);
+    border: 3px solid var(--tropical-color);
+}
