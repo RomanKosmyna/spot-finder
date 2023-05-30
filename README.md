@@ -53,7 +53,7 @@ Since project is using Next.js 13 for its client side, it exploits built in fetc
   <br/>
   <br/>
 2) Navigation through general sections:
-<br/>
+
     • Home (All venues)
     <br/>
     • Filtering/Search
