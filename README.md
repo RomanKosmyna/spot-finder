@@ -30,6 +30,7 @@ Since project is using Next.js 13 for its client side, it exploits built in fetc
 ## Main Features:
 
  1) From user perspective:
+
     • Authentication, Authorization process
     <br/>
     • Ability to add, edit and delete venues
