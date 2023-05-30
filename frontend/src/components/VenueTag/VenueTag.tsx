@@ -6,9 +6,9 @@ interface IProps {
 
 const VenueTag: FC<IProps> = ({ tag }) => {
   return (
-    <div>
-      
-    </div>
+    <span>
+      {tag}
+    </span>
   );
 };
 
