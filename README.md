@@ -32,14 +32,23 @@ Since project is using Next.js 13 for its client side, it exploits built in fetc
  - From user perspective:
  <br/>
     • Authentication, Authorization process
+    <br/>
     • Ability to add, edit and delete venues
+    <br/>
     • Ability to rate veunes
+    <br/>
     • Viewing the list of establishments
+    <br/>
     • Sorting (by rating, average check, publication date, in alphabetical order, proximity to the user)
+    <br/>
     • Searching by name
+    <br/>
     • Filtering by criteria (rating, type, range of average check, tag (specified by the establishment), features (Wi-Fi, parking, live music)
+    <br/>
     • Adding an venue to favorites
+    <br/>
     • Sending a message to the venue manager (basically a user that added a venue)
+    <br/>
     • Logging into a personal account (with corresponding privileges)
     
 - Navigation through general sections:
