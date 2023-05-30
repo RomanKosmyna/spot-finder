@@ -30,6 +30,7 @@ Since project is using Next.js 13 for its client side, it exploits built in fetc
 ## Main Features:
 
  - From user perspective:
+ <br/>
     • Authentication, Authorization process
     • Ability to add, edit and delete venues
     • Ability to rate veunes
@@ -42,12 +43,14 @@ Since project is using Next.js 13 for its client side, it exploits built in fetc
     • Logging into a personal account (with corresponding privileges)
     
 - Navigation through general sections:
+<br/>
     • Home (All venues)
     • Filtering/Search
     • Top (with editing capabilities) + Ability to add top categories like "Best venue for weddings, corporate events, birthdays"
     • News (add promotions)
     
 - Personal Account (Regular User):
+<br/>
     • Profile Editing
     • Adding Venue (after moderation by the venue administrator, the venue is included in the general list)
     • Editing Venue
