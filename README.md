@@ -17,6 +17,9 @@ Back-End Techologies:
 - Prisma ORM
 - Multer, Bcrypt, Swagger
 
+Database:
+-PostgreSQL
+
 Tools:
 - Postman, Eslint, Prettier
 
