@@ -1,6 +1,6 @@
 # spot-finder
 
-#Final Okten School project.
+## Final Okten School project.
 
 Main Technologies:
 HTML5, CSS, JavaScript, TypeScript, Node.js, React, Next.js, Redux, Redux Toolkit, Nest.js, Prisma, PostgreSQL
@@ -27,7 +27,7 @@ If they pass a review, then they are getting published on a Home page.
 
 Since project is using Next.js 13 for its client side, it exploits built in fetch for data integration from Backend , which provides an up-to-date information about all reviewed venues.
 
-##Main Features:
+## Main Features:
 
  - From user perspective:
     • Authentication, Authorization process
