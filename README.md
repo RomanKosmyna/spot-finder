@@ -88,7 +88,7 @@ Since project is using Next.js 13 for its client side, it exploits built in fetc
     <br/>
     • Messages from the venue's page (complaint or question via email)
     
-4) Personal Account (Administator):
+4) _Personal Account (Administator):_
     
 
 ## _Project is being optimized for all devices._
