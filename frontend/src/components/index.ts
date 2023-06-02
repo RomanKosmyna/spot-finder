@@ -12,4 +12,6 @@ export * from "./Navigation/NavigationContainer/NavigationContainer";
 export * from "./Venues/VenuesList/VenuesList";
 export * from "./Venues/VenueListItem/VenueListItem";
 export * from "./GeneralButton/GeneralButton";
-export * from "./VenueTag/VenueTag";
+export * from "./VenueBadge/VenueBadge";
+export * from "./Venue/Venue";
+export * from "./VenueDetail/VenueDetail";

@@ -3,7 +3,7 @@ import { type Venue } from "@/src/interfaces";
 import { apiService } from "@/src/services";
 import styles from "./VenueListItem.module.css";
 import GeneralButton from "@/src/components/GeneralButton/GeneralButton";
-import VenueTag from "@/src/components/VenueTag/VenueTag";
+import VenueBadge from "@/src/components/VenueBadge/VenueBadge";
 
 interface IProps {
   venue: Venue;
@@ -12,7 +12,7 @@ interface IProps {
 const VenueListItem: FC<IProps> = ({ venue }: IProps) => {
     const photo = venue.photo.split("/")[1];
     const photoUrl = `${apiService}/${photo}`;
-  console.log(venue.tags);
+
     return (
       <section
         style={{
@@ -30,20 +30,13 @@ const VenueListItem: FC<IProps> = ({ venue }: IProps) => {
           <div className={styles.stripe}></div>
           <div className={styles.descriptionFadeIn}>
             <p className={styles.text}>{venue.description}</p>
-            <GeneralButton text={"View details"} />
+            <GeneralButton text={"View details"} id={venue.id} />
           </div>
         </div>
-        {/* <Image */}
-        {/*  src={`${photoUrl}`} */}
-        {/*  alt={"Venue photo"} */}
-        {/*  fill */}
-        {/*  sizes={"max-width: 760px"} */}
-        {/*  priority={true} */}
-        {/* /> */}
-        <div>
+        <div className={styles.tags}>
           {venue.tags.map(
             (tag, index) =>
-              <VenueTag key={index} tag={tag} />,
+              <VenueBadge key={index} tag={tag} index={index} />,
           )}
         </div>
       </section>

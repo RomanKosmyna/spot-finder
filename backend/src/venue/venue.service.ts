@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { PrismaService } from '../core/orm/prisma.service';
 import VenueTagsDto from './dto/venue.tags.dto';
 import VenueDto from './dto/venue.dto';
@@ -10,6 +10,18 @@ export class VenueService {
 
   async getVenues() {
     return await this.prismaService.venue.findMany();
+  }
+
+  async getVenueById(id: string) {
+    const venue = await this.prismaService.venue.findFirst({
+      where: {
+        id: id,
+      },
+    });
+    if (!venue) {
+      throw new HttpException('Venue not found', HttpStatus.NOT_FOUND);
+    }
+    return venue;
   }
 
   async createVenue(body: VenueDto): Promise<Venue> {

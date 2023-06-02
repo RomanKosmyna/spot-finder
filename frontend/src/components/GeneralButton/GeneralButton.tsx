@@ -1,16 +1,24 @@
+"use client";
+
 import { type FC } from "react";
+import Link from "next/link";
 
 import styles from "./GeneralButton.module.css";
 
 interface IProps {
   text: string;
+  id: string;
 }
 
-const GeneralButton: FC<IProps> = ({text}) => {
+const GeneralButton: FC<IProps> = ({text, id}) => {
+
   return (
-    <button type="submit" className={styles.btn}>
+    <Link
+      href={`/venue/${id}`}
+      className={styles.btn}
+    >
       {text}
-    </button>
+    </Link>
   );
 };
 

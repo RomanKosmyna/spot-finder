@@ -2,10 +2,11 @@
 
 import React, { type FC, useState } from "react";
 import { useRouter } from "next/navigation";
-import { api, urls } from "@/src/configs";
+import { urls } from "@/src/configs";
 import axios, { type AxiosResponse } from "axios";
 
 import styles from "./AuthForm.module.css";
+import { apiService } from "@/src/services";
 
 interface IProps {
   buttonText: string;
@@ -33,7 +34,7 @@ const AuthForm: FC<IProps> = ({ buttonText, route }) => {
       password: (event.target as HTMLFormElement).password.value,
     };
 
-    const endpoint = `${api}${route === "login" ? urls.login : urls.registration}`;
+    const endpoint = `${apiService}${route === "login" ? urls.login : urls.registration}`;
     
     try {
       const response: AxiosResponse = await axios.post(endpoint, data, {

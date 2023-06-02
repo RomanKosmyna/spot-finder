@@ -3,6 +3,7 @@ import {
   Controller,
   Get,
   HttpStatus,
+  Param,
   Post,
   Req,
   Res,
@@ -21,9 +22,20 @@ import { editFileName, imageFileFilter } from '../core/file.upload';
 export class VenueController {
   constructor(private readonly venueService: VenueService) {}
 
-  @Get('/allVenues')
+  @Get()
   async allVenues(@Req() req, @Res() res) {
     return res.status(HttpStatus.OK).json(await this.venueService.getVenues());
+  }
+
+  @Get(':id')
+  async getById(
+    @Req() req,
+    @Param('id') id: string,
+    @Res() res,
+  ): Promise<VenueDto> {
+    return res
+      .status(HttpStatus.OK)
+      .json(await this.venueService.getVenueById(id));
   }
 
   @Post('/createVenue')
@@ -63,6 +75,7 @@ export class VenueController {
 
   @Get('/getTags')
   async getTags(@Req() req, @Res() res): Promise<VenueTags> {
+    console.log('1');
     return res
       .status(HttpStatus.OK)
       .json(await this.venueService.getVenueTags());

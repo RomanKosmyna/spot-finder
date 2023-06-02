@@ -10,6 +10,13 @@ body {
     --black: black;
     --tropical-color: #9381ff;
 
+    --badge-purple-bg: #b79ced;
+    --badge-green-bg: #10E5AA;
+    --badge-orange-bg: #d17724;
+    --badge-blue-bg: #3b88e915;
+
+    --text-gradient: linear-gradient(180deg,#555,#000);
+
     --border-radius-625: .625rem;
 
     --flex: flex;

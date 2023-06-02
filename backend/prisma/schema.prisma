@@ -8,24 +8,33 @@ generator client {
 }
 
 model User {
-  id       String      @id @default(uuid())
+  id       Int        @id @default(autoincrement())
   email    String      @unique
   username String
   password String
 }
 
+model Token {
+  id            Int     @id @default(autoincrement())
+  userId        String
+  accessToken   String
+  refreshToken  String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
 model Venue {
-  id          String      @id @default(uuid())
+  id          Int      @id @default(autoincrement())
   name        String
   photo       String
   schedule    String
   contact     String
   description String
-  tags        String[] @default([])
+  tags        String[]
 }
 
 model VenueTags {
-  id         String      @id @default(uuid())
+  id         Int      @id @default(autoincrement())
   categories String[]
   cuisine    String[]
   features   String[]
