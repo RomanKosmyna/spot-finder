@@ -3,10 +3,14 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
-import { AuthModule } from './auth/auth.module';
+import { AuthModule } from './auth';
 import { JwtModule } from '@nestjs/jwt';
-import { UserModule } from './user/user.module';
-import { VenueModule } from './venue/venue.module';
+import { UserModule } from './user';
+import { VenueModule } from './venue';
+import { TokenModule, TokenService } from './token';
+import { ScheduleModule } from '@nestjs/schedule';
+import { CronService } from './cron/cron.service';
+import { CronModule } from './cron/cron.module';
 
 @Module({
   imports: [
@@ -14,11 +18,14 @@ import { VenueModule } from './venue/venue.module';
     JwtModule,
     UserModule,
     VenueModule,
+    TokenModule,
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'public'),
     }),
+    ScheduleModule.forRoot(),
+    CronModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, CronService, TokenService],
 })
 export class AppModule {}

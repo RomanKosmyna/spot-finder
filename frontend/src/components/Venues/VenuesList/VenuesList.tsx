@@ -6,6 +6,7 @@ import styles from "./VenuesList.module.css";
 
 async function getVenueData() {
   const response = await fetch(venueService.getAllVenues, { cache: "no-store" });
+
   if (!response.ok) {
     throw new Error("Failed to fetch data");
   }

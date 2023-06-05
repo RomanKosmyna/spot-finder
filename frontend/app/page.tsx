@@ -6,9 +6,9 @@ export default async function Home() {
 
   return (
     <>
-      <Header />
-      <NavigationContainer />
-      <VenuesList/>
+       <Header />
+       <NavigationContainer />
+       <VenuesList/>
     </>
   );
 }

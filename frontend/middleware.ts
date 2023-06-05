@@ -1,12 +1,11 @@
-import { NextResponse } from "next/server";
-import type { NextRequest } from 'next/server';
+import { type NextRequest, NextResponse } from "next/server";
 
-
-export function middleware(request: NextRequest, response: NextResponse) {
-
-  return NextResponse.next()
+export async function middleware(request: NextRequest) {
+  let cookie = request.cookies.get('accessToken')?.value;
+  console.log(cookie);
+  console.log(request.cookies.has("accessToken"));
 }
 
-export const config = {
-  matcher: "/"
-}
+// export const config = {
+//   matcher: ["/", "/venue/:id", "/profile"],
+// };

@@ -12,7 +12,7 @@ export class VenueService {
     return await this.prismaService.venue.findMany();
   }
 
-  async getVenueById(id: string) {
+  async getVenueById(id: number) {
     const venue = await this.prismaService.venue.findFirst({
       where: {
         id: id,

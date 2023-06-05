@@ -3,7 +3,7 @@ import { IsNotEmpty, IsString, Length, Matches } from 'class-validator';
 import { UserConstant } from '../../core/constant';
 import { Transform } from 'class-transformer';
 
-export default class CreateUserDto {
+export default class UserDto {
   @ApiProperty()
   @IsString()
   @IsNotEmpty()

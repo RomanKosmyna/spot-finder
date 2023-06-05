@@ -1,9 +1,10 @@
 import { type FC } from "react";
 import { type Venue } from "@/src/interfaces";
 import { apiService } from "@/src/services";
-import styles from "./VenueListItem.module.css";
 import GeneralButton from "@/src/components/GeneralButton/GeneralButton";
 import VenueBadge from "@/src/components/VenueBadge/VenueBadge";
+
+import styles from "./VenueListItem.module.css";
 
 interface IProps {
   venue: Venue;

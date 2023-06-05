@@ -7,6 +7,8 @@ import axios, { type AxiosResponse } from "axios";
 
 import styles from "./AuthForm.module.css";
 import { apiService } from "@/src/services";
+import { setCookie } from "cookies-next";
+import { NextResponse } from "next/server";
 
 interface IProps {
   buttonText: string;
@@ -44,6 +46,9 @@ const AuthForm: FC<IProps> = ({ buttonText, route }) => {
       });
 
       if (response.status === 200 || response.status === 201) {
+        const { accessToken, refreshToken } = response.data;
+        setCookie("accessToken", accessToken);
+        setCookie("refreshToken", refreshToken);
         router.push(route === "login" ? "/" : "/login");
       }
     } catch (e) {

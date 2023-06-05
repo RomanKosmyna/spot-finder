@@ -6,6 +6,9 @@ const urls = {
   venue: {
     getVenues: "/venue",
     getVenueById: (id: string) => `/venue/${id}`
+  },
+  profile: {
+    getProfile: (token: string) => `/token/${token}`,
   }
 }
 

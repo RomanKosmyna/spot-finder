@@ -30,7 +30,7 @@ export class VenueController {
   @Get(':id')
   async getById(
     @Req() req,
-    @Param('id') id: string,
+    @Param('id') id: number,
     @Res() res,
   ): Promise<VenueDto> {
     return res

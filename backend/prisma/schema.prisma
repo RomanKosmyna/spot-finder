@@ -16,7 +16,7 @@ model User {
 
 model Token {
   id            Int     @id @default(autoincrement())
-  userId        String
+  userId        Int
   accessToken   String
   refreshToken  String
   createdAt     DateTime @default(now())
