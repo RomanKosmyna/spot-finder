@@ -33,7 +33,7 @@ const AuthForm: FC<IProps> = ({ buttonText, route }) => {
     }
   };
 
-  const handleSubmit = async (event: Event) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const data = {
@@ -54,7 +54,7 @@ const AuthForm: FC<IProps> = ({ buttonText, route }) => {
       })
 
       if (response.status === 200 || response.status === 201) {
-        const jsonResponse = await response.json();
+        // const jsonResponse = await response.json();
 
         router.push(route === "login" ? "/" : "/login");
       }
@@ -64,6 +64,7 @@ const AuthForm: FC<IProps> = ({ buttonText, route }) => {
   };
 
   return (
+    // eslint-disable-next-line @typescript-eslint/no-misused-promises
     <form className={styles.form} onSubmit={async (event) => {
       await handleSubmit(event);
     }}>

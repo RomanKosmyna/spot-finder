@@ -12,7 +12,7 @@ const Logo = () => {
       setCurrentWord(currentWord => (currentWord + 1) % 2);
     }, 4000);
 
-    return () => clearInterval(interval);
+    return () => { clearInterval(interval); };
   }, []);
 
   return (

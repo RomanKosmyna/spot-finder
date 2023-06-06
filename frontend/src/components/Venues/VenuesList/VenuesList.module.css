@@ -1,7 +1,0 @@
-.mainVenueContainer {
-    width: var(--w100);
-    display: var(--flex);
-    justify-content: space-around;
-    flex-wrap: wrap;
-    background: var(--section-background);
-}

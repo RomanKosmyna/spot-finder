@@ -1,5 +1,4 @@
 import Navigation from "@/src/components/Navigation/Navigation";
-import Container from "@/src/components/Container";
 
 export default async function Home() {
 
@@ -9,7 +8,6 @@ export default async function Home() {
       {/* <Header /> */}
       {/* <NavigationContainer /> */}
       {/* <VenuesList/> */}
-      <Container />
     </div>
   );
 }
