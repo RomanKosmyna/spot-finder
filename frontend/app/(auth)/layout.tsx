@@ -1,17 +1,31 @@
-import React from "react";
+"use client";
+
+import AuthHeader from "@/src/components/Auth/AuthHeader/AuthHeader";
+import { useAppSelector } from "@/src/hooks";
+
 import styles from "./layout.module.css";
-import Logo from "@/src/components/Logo/Logo";
+import { useEffect, useState } from "react";
 
 export default function AuthLayout({
                                      children,
                                    }: {
   children: React.ReactNode
 }) {
+  const {toggleThemeMode} = useAppSelector(state => state.toggleReducer);
+  const [isMounted, setIsMounted] = useState(false);
+  useEffect(() => {
+    setIsMounted(true);
+  },[])
+
   return (
-    <main className={styles.main}>
-      <Logo/>
-      {children}
-    </main>
+    <div style={{visibility: isMounted ? "visible" : "hidden"}}>
+      <main className={styles.main}
+            data-theme={toggleThemeMode ? "dark" : "light"}
+      >
+        <AuthHeader />
+        {children}
+      </main>
+    </div>
   );
 
 }

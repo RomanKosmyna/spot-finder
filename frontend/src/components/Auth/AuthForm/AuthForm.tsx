@@ -3,12 +3,9 @@
 import React, { type FC, useState } from "react";
 import { useRouter } from "next/navigation";
 import { urls } from "@/src/configs";
-import axios, { type AxiosResponse } from "axios";
+import { apiService } from "@/src/services";
 
 import styles from "./AuthForm.module.css";
-import { apiService } from "@/src/services";
-import { setCookie } from "cookies-next";
-import { NextResponse } from "next/server";
 
 interface IProps {
   buttonText: string;
@@ -16,15 +13,24 @@ interface IProps {
 }
 
 const AuthForm: FC<IProps> = ({ buttonText, route }) => {
-  const [target, setTarget] = useState("");
+  const [target, setTarget] = useState({
+    email: "",
+    username: "",
+    password: "",
+  });
+
   const router = useRouter();
 
   const inputFocused = (inputId: string) => {
-    setTarget(inputId);
+    setTarget(prevTarget => ({...prevTarget, [inputId]: inputId}));
   };
 
   const inputNotFocused = (el: React.FocusEvent<HTMLInputElement>) => {
-    if (el.target.value.length === 0) setTarget("");
+    const field = el.target.id;
+
+    if (el.target.value.length === 0) {
+      setTarget(prevTarget => ({...prevTarget,[field]: ""}));
+    }
   };
 
   const handleSubmit = async (event: Event) => {
@@ -37,18 +43,19 @@ const AuthForm: FC<IProps> = ({ buttonText, route }) => {
     };
 
     const endpoint = `${apiService}${route === "login" ? urls.login : urls.registration}`;
-    
+
     try {
-      const response: AxiosResponse = await axios.post(endpoint, data, {
+      const response = await fetch(endpoint, {
+        method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
         },
-      });
+        body: JSON.stringify(data)
+      })
 
       if (response.status === 200 || response.status === 201) {
-        const { accessToken, refreshToken } = response.data;
-        setCookie("accessToken", accessToken);
-        setCookie("refreshToken", refreshToken);
+        const jsonResponse = await response.json();
+
         router.push(route === "login" ? "/" : "/login");
       }
     } catch (e) {
@@ -64,7 +71,7 @@ const AuthForm: FC<IProps> = ({ buttonText, route }) => {
         <label
           htmlFor="email"
           className={`${styles.inputLabel} 
-          ${target === "email" ? styles.focusedLabel : ""} `}
+          ${target.email !== "" ? styles.focusedLabel : styles.notFocusedLabel} `}
         >
           Email
         </label>
@@ -76,7 +83,7 @@ const AuthForm: FC<IProps> = ({ buttonText, route }) => {
                  inputNotFocused(el);
                }}
                required={true}
-               pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"
+               pattern="[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}"
                title="Email should follow and example: example@domain.com"
         />
       </div>
@@ -84,7 +91,7 @@ const AuthForm: FC<IProps> = ({ buttonText, route }) => {
         <label
           htmlFor="username"
           className={`${styles.inputLabel} 
-          ${target === "username" ? styles.focusedLabel : ""} `}
+          ${target.username !== "" ? styles.focusedLabel : styles.notFocusedLabel} `}
         >
           Username
         </label>
@@ -104,7 +111,8 @@ const AuthForm: FC<IProps> = ({ buttonText, route }) => {
       <div className={styles.inputContainer}>
         <label
           htmlFor="password"
-          className={`${styles.inputLabel} ${target === "password" ? styles.focusedLabel : ""} `}
+          className={`${styles.inputLabel} ${target.password !== "" ? 
+            styles.focusedLabel : styles.notFocusedLabel} `}
         >
           Password
         </label>
@@ -116,7 +124,7 @@ const AuthForm: FC<IProps> = ({ buttonText, route }) => {
                  inputNotFocused(el);
                }}
                required={true}
-               pattern="[a-zA-Z0-9!@#$%^&*()_+-=]{6,14}"
+               pattern="[a-zA-Z0-9!@#$%^&*_+]{6,14}"
                title="Password length should be 6-14 characters.
                It can consist of digits (0 to 9), alphabets (a to z) and symbols (!@#$%^&*()_+-=)."
         />

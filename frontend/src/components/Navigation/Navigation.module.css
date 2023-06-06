@@ -1,0 +1,6 @@
+.navigationContainer {
+    box-sizing: border-box;
+    height: 7rem;
+    background-color: var(--black-background);
+    border-bottom: 1px solid var(--border-2);
+}

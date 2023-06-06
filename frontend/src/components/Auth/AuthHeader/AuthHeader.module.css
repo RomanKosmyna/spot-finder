@@ -1,0 +1,18 @@
+.authHeader {
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.8rem;
+    background-color: var(--main-background);
+}
+
+.score {
+    position: relative;
+}
+
+.settings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

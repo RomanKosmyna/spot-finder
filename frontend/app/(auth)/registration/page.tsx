@@ -1,8 +1,10 @@
-import AuthContainer from "@/src/components/AuthContainer/AuthContainer";
+import AuthContainer from "@/src/components/Auth/AuthContainer/AuthContainer";
+
+import styles from "../../../src/styles/page.module.css";
 
 export default function Registration() {
   return (
-    <div>
+    <div className={styles.auth}>
       <AuthContainer
         heading={"Register"}
         formType={"register"}

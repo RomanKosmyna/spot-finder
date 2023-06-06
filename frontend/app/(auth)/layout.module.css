@@ -1,10 +1,8 @@
 .main {
     width: var(--w100);
     height: var(--vh100);
-    background-image: url("/img/authBackground.webp");
-    background-repeat: no-repeat;
+    background-color: var(--main-background);
     background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }

@@ -1,54 +1,99 @@
-.container {
-    height: 10%;
-    min-height: 5rem;
-    position: sticky;
-    display: var(--flex);
-    align-items: var(--flex-center);
-    justify-content: space-between;
-    background: hsla(0,0%,100%,.8);
-    top: 0;
-    backdrop-filter: saturate(180%) blur(5px);
-    padding: 0 .5rem;
-    z-index: 3333;
+.header {
+    box-sizing: border-box;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--main-background);
+    padding: 0 1.3rem;
 }
 
-.headerBorderOnScroll {
-    box-shadow: inset 0 -1px 0 0 #eaeaea;
-}
-
-.heading {
-    font-size: 1.5rem;
-    margin: 0;
-}
-
-.navigation {
+.headerScope {
 
 }
 
-.ul {
-    display: var(--flex);
-    list-style-type: none;
-    margin: 0;
+.scopeList {
     padding: 0;
+    margin: 0;
+    max-width: var(--w100);
+    height: 45px;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
 }
 
-.li {
-    margin: 0 .5rem;
+.scopeListItem {
+    position: relative;
+    height: var(--h100);
+    width: 85px;
 }
 
-.li > a {
-    text-decoration: none;
+.scopeListItem > a {
+    height: var(--h100);
 }
 
-.burgerBtn {
-    border: none;
-    background-color: transparent;
+.headerLinks {
+    display: flex;
 }
 
-.burgerBtn > .burgerIcon {
-    font-size: 3.2rem;
-}
 
-.overflow {
-    overflow-y: hidden;
-}
+
+
+
+
+
+
+
+/*.container {*/
+/*    height: 10%;*/
+/*    min-height: 5rem;*/
+/*    position: sticky;*/
+/*    display: var(--flex);*/
+/*    align-items: var(--flex-center);*/
+/*    justify-content: space-between;*/
+/*    background: hsla(0,0%,100%,.8);*/
+/*    top: 0;*/
+/*    backdrop-filter: saturate(180%) blur(5px);*/
+/*    padding: 0 .5rem;*/
+/*    z-index: 3333;*/
+/*}*/
+
+/*.headerBorderOnScroll {*/
+/*    box-shadow: inset 0 -1px 0 0 #eaeaea;*/
+/*}*/
+
+/*.heading {*/
+/*    font-size: 1.5rem;*/
+/*    margin: 0;*/
+/*}*/
+
+/*.navigation {*/
+
+/*}*/
+
+/*.ul {*/
+/*    display: var(--flex);*/
+/*    list-style-type: none;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+
+/*.li {*/
+/*    margin: 0 .5rem;*/
+/*}*/
+
+/*.li > a {*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*.burgerBtn {*/
+/*    border: none;*/
+/*    background-color: transparent;*/
+/*}*/
+
+/*.burgerBtn > .burgerIcon {*/
+/*    font-size: 3.2rem;*/
+/*}*/
+
+/*.overflow {*/
+/*    overflow-y: hidden;*/
+/*}*/

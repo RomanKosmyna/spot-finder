@@ -1,14 +1,15 @@
-import NavigationContainer from "@/src/components/Navigation/NavigationContainer/NavigationContainer";
-import Header from "@/src/components/Header/Header";
-import VenuesList from "@/src/components/Venues/VenuesList/VenuesList";
+import Navigation from "@/src/components/Navigation/Navigation";
+import Container from "@/src/components/Container";
 
 export default async function Home() {
 
   return (
-    <>
-       <Header />
-       <NavigationContainer />
-       <VenuesList/>
-    </>
+    <div className={"page"}>
+      <Navigation />
+      {/* <Header /> */}
+      {/* <NavigationContainer /> */}
+      {/* <VenuesList/> */}
+      <Container />
+    </div>
   );
 }

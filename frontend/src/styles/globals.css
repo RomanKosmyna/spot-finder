@@ -1,16 +1,47 @@
 body {
     margin: 0;
-    background-color: var(--black-background);
+    background-color: var(--main-background);
+    color: var(--main-text-color);
+    text-rendering: optimizeLegibility;
+}
+
+#next {
+    height: 100vh;
+}
+
+.page {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 :root {
+    --h100: 100%;
     --w100: 100%;
     --vh100: 100vh;
 
+    --main-background: var(--black-background);
+    --main-text-color: var(--white-color);
+    --general-btn-border-color: var(--white-color);
+    --general-btn-hover-bg-color: var(--white-color);
+    --general-btn-hover-text-color: var(--black-color);
+
+    --auth-website-name: linear-gradient(180deg, #fff, hsla(0, 0%, 100%, .75));
+
     --white-foreground: #fff;
+    --white-background: #fff;
     --black-background: #000;
 
+    --white-color: #fff;
+    --black-color: #000;
+    --orange-color-1: #f26419;
+
+    --accents-5: #888;
+
     --border-2: #333;
+
+    --white-theme-color: #fff;
+    --black-theme-color: #000;
 
     --white: white;
     --black: black;
@@ -30,6 +61,18 @@ body {
     --flex-column: column;
 
     --section-background: radial-gradient(50% 50% at 50% 50%, #fff 0,#fafafa 100%);
+}
+
+[data-theme = "light"] {
+    --main-background: var(--white-background);
+    --main-text-color: var(--black-color);
+    --general-btn-border-color: var(--black-color);
+    --general-btn-hover-bg-color: var(--black-color);
+    --general-btn-hover-text-color: var(--white-color);
+    --auth-website-name: var(--black-color);
+    /*--white-foreground: #fff;*/
+    /*--background: --black-background;*/
+    /*--black-background: #fff;*/
 }
 
 .bodyOverflowOpenedMobileMenu {
