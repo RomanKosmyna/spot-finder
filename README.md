@@ -1,6 +1,6 @@
 # spot-finder
 
-## _Currently in progress._
+## _Currently in the process of transferring and overhauling to another project._
 ## Final Okten School project.
 
 Main Technologies:
